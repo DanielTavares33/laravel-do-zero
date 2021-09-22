@@ -8,8 +8,9 @@
                 captis de fortis, audax omnia.</p>
             <section class="contact__options">
 
-                <form class="contact__form" action="{{route('site.contact.form')}}" method="post">
-                    @csrf
+                <form class="contact__form" action="{{ route('site.contact.form') }}" method="post">
+                    {{-- @csrf: gives security to the form --}}
+                    @csrf 
                     @if(session('success'))
                         <div>
                             {{session('message')}}
